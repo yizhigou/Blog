@@ -12,13 +12,12 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="https://ghost.org/assets/favicon-e13fe17b11ad125601924cfb260f20da.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="//ghost.org/assets/favicon-e13fe17b11ad125601924cfb260f20da.ico">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" href="https://ghost.org/assets/application-adf821d0ec077eff260016527257e0b9.css" media="all" rel="stylesheet">
+    <link rel="stylesheet" href="//ghost.org/assets/application-adf821d0ec077eff260016527257e0b9.css" media="all" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     
-    {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 
     <script type="text/javascript">
@@ -31,11 +30,11 @@
     <header id="global-header" class="navbar">
        <nav role="navigation">
            <div class="wrapper">
-               <a class="ghost-logo" href="//ghost.org/"><span>Ghost</span></a>
-               <button type="button" class="mobile-menu" data-toggle="collapse" data-target=".nav-collapse">
+               <a class="ghost-logo" href="https://ghost.org/"><span>Ghost</span></a>
+               <button type="button" class="mobile-menu" data-toggle="closed" data-target=".nav-collapse">
                <span class="hidden">Menu</span>
                </button>
-               <ul id="main-menu" class="nav-collapse collapse">
+               <ul id="main-menu" class="nav-collapse closed">
                    <li><a href="//ghost.org/features/">Features</a></li>
                    <li><a href="//ghost.org/about/">About</a></li>
                    <li><a href="//marketplace.ghost.org">Marketplace</a></li>
@@ -48,7 +47,6 @@
         </nav>
     </header>
 
-    {{! Everything else gets inserted here }}
     <main role="main">
         <div class="page-wrapper">
             {{{body}}}
@@ -89,12 +87,13 @@
       <nav id="footer-nav" role="navigation">
         <ul id="footer-menu">
           <li class="logo"><a href="//ghost.org/"><span class="hidden">Ghost</span></a></li>
-          <li><a href="//ghost.org/">Home</a></li>
-          <li><a href="//ghost.org/features/">Features</a></li>
-          <li><a href="//ghost.org/forum/">Forum</a></li>
-          <li><a href="//marketplace.ghost.org">Marketplace</a></li>
-          <li><a href="//ghost.org/about/">About</a></li>
-          <li class="extra"><a href="//blog.ghost.org/">Blog</a></li>
+          <li><a href="https://ghost.org/about/">About</a></li>
+          <li><a href="http://status.ghost.org">Status</a></li>
+          <li><a href="https://ghost.org/pricing/">Pricing</a></li>
+          <li><a href="http://blog.ghost.org/">Blog</a></li>
+          <li><a href="https://ghost.org/about/terms/">Terms</a></li>
+          <li><a href="https://ghost.org/about/privacy/">Privacy</a></li>
+          <li><a href="https://ghost.org/about/contact/">Contact</a></li>
         </ul>
         <div class="clearfix"></div>
         <ul id="social-menu">
@@ -115,18 +114,17 @@
       <p>Any money Ghost makes can only ever be used to re-invest in making Ghost better. Not making shareholders rich.</p>
     </div>
 
-    {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script src="https://ghost.org/navigation"></script>
     <script type="text/javascript">
         function replaceHeader (content) {
-            jQuery(document).ready(function() {
-                jQuery("#global-header > nav > .wrapper").replaceWith(content);
-                jQuery("#global-header > nav > .wrapper").fadeIn();
+            $(document).ready(function() {
+                $("#global-header > nav > .wrapper").replaceWith(content);
+                $("#global-header > nav > .wrapper").fadeIn();
             });
     }
     </script>
+    <script src="https://ghost.org/navigation/"></script>
 
     <script type="text/javascript" src="//ghost.org/assets/application-b3c32be93105ff710a7fd776dff06d70.js"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>

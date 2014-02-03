@@ -10,9 +10,6 @@
 
         $(".post-content").fitVids();
 
-        var contentWidth = $(".post-content").width();
-        console.log(contentWidth);
-
     });
 
 }(jQuery));
