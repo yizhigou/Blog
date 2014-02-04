@@ -34,3 +34,21 @@ height: auto!important;
 padding-bottom: 0;
 overflow: visible!important;
 }}
+
+.page-wrapper {
+    padding: 3% 5%;
+}
+
+.content {
+    margin-right: 350px;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 3% 5% 3% 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+}
