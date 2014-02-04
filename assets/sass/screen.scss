@@ -21,34 +21,145 @@
 
  // sass --watch assets/sass/screen.scss:assets/css/screen.css --style compressed
 
+/* ==========================================================================
+   0. Imports & Vars
+   ========================================================================== */
+
+ // Bourbon - http://bourbon.io/
+@import "bourbon/_bourbon";
+$rounded: 2px;
+$shadow: rgba(0,0,0,0.05) 0 1px 5px;
+$default-transition-duration: 0.3s;
+
+// Breakpoint - http://breakpoint-sass.com/
+@import "breakpoint";
+$breakpoint-default-feature: max-width;
+
+// Max widths
+$netbook: 1000px;
+$tablet: 800px;
+$mobile: 400px;
+
+// Min widths
+$biggerthan-widescreen: min-width 1500px, min-width 1500px;
+$biggerthan-netbook: min-width 1000px, min-width 1000px;
+$biggerthan-tablet: min-width 800px, min-width 800px;
+$biggerthan-mobile: min-width 401px, min-width 401px;
+
+// Heights
+$letterbox: max-height 600px, max-height 600px;
+
+// Pixel Densities
+$retina: 2 device-pixel-ratio;
+
+// Colors
+$darkgrey: #242628;
+$grey: #35393b;
+$midgrey: #7d878a;
+$lightgrey: #e2edf2;
+
+$brown: #aaa9a2;
+$midbrown: #c0bfb6;
+$lightbrown: #edece4;
+
+$blue: #5BA4E5;
+$red: #e25440;
+$orange: #F2A925;
+$green: #9FBB58;
+
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
 
-
-@media (min-width: 768px) {
-.navbar-collapse.closed {
-display: block!important;
-height: auto!important;
-padding-bottom: 0;
-overflow: visible!important;
-}}
-
 .page-wrapper {
-    padding: 3% 5%;
+    padding: 50px 60px;
 }
 
-.content {
+.blog-content {
     margin-right: 350px;
 }
 
-.sidebar {
+.blog-sidebar {
     width: 300px;
-    padding: 3% 5% 3% 0;
+    padding: 50px 60px 50px 0;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    background: #ccc;
+}
+
+@include breakpoint(1100px) {
+    .page-wrapper { padding: 30px 40px; }
+    .blog-sidebar { padding: 30px 30px 30px 0; }
+    .blog-content { margin-right: 330px; }
+}
+
+@include breakpoint(1000px) {
+    .blog-content { margin-right: 280px; }
+    .blog-sidebar { width: 250px; }
+}
+
+@include breakpoint(850px) {
+    .page-wrapper { padding: 8% 11% }
+    .blog-content { margin-right: 0; }
+    .blog-sidebar {
+        width: 100%;
+        position: static;
+        padding: 15px 0;
+    }
+}
+
+@include breakpoint(650px) {
+    .page-wrapper { padding: 6% 9% }
+}
+
+@include breakpoint(400px) {
+    .page-wrapper { padding: 15px; }
+}
+
+.blog-subscribe {
+    padding: 25px 30px 30px;
+    color: #fff;
+    background: $green;
+
+    p {
+        font-size: 17px;
+        font-weight: 200;
+        line-height: 1.3em;
+        margin: 0 0 15px 0;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    input {
+        font-size: 13px;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 5px;
+        border: none !important;
+        &:focus {
+            border: none;
+        }
+    }
+    
+    button {
+        background: #7D8E51;
+        &:not(.button-loading):hover {
+            background: #667249;
+        }
+    }
+
+}//.blog-subscribe
+
+//misc hack - no idea why this is needed, but it is
+@media (min-width: 768px) {
+    .navbar-collapse.closed {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
 }
