@@ -50,7 +50,7 @@ $biggerthan-mobile: min-width 401px, min-width 401px;
 $letterbox: max-height 600px, max-height 600px;
 
 // Pixel Densities
-$retina: 2 device-pixel-ratio;
+$retina: min-resolution 1.5dppx;
 
 // Colors
 $darkgrey: #242628;
@@ -218,6 +218,25 @@ h4 a, h5 a, h6 a {
         padding: 0;
         margin: 0;
         list-style: none;
+    }
+}
+
+.blog-love {
+    display: block;
+    text-decoration: none;
+    color: $midgrey;
+    height: 140px;
+    border: #eee 1px solid;
+    background: url(../images/heart.png) 150px 110px no-repeat;
+    @include breakpoint($retina) {
+        background: url(../images/heart@2x.png) 150px 110px no-repeat;
+        background-size: 115px 115px;
+        content: "retina";
+    }
+
+    &:hover {
+        text-decoration: none;
+        border-color: $red;
     }
 }
 
