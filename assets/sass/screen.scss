@@ -94,11 +94,11 @@ $green: #9FBB58;
         line-height: 1.3em;
         margin: 0 0 15px 0;
     }
+}
 
-    .widget {
-        padding: 30px;
-        margin-bottom: 30px;
-    }
+.widget {
+    padding: 25px 30px 30px;
+    margin-bottom: 30px;
 }
 
 @include breakpoint(1100px) {
@@ -160,6 +160,7 @@ $green: #9FBB58;
 }//.blog-subscribe
 
 .blog-community {
+    padding-bottom: 15px;
     color: #7E878B;
     background: #E3EDF2;
 
@@ -168,6 +169,15 @@ $green: #9FBB58;
         margin: 0;
         list-style: none;
     }
+}
+
+.share {}
+.fb-like {
+    margin-right: 30px;
+}
+.pocket-btn {
+    display: inline-block;
+    vertical-align: top;
 }
 
 //misc hack - no idea why this is needed, but it is
