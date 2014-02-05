@@ -135,6 +135,17 @@ h4 a, h5 a, h6 a {
     }
 }
 
+.wrap {
+    position: relative;
+}
+
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: -3%;
+}
+
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
@@ -144,13 +155,34 @@ h4 a, h5 a, h6 a {
     overflow: hidden;
 }
 
+.blog-header {
+    position: relative;
+    display: table;
+    height: 200px;
+    width: 100%;
+    padding: 50px 60px;
+    margin: -50px -60px 50px;
+    text-align: center;
+    color: #fff;
+    background: #303538 no-repeat center center;
+    background-size: cover;
+
+    h1 {
+        color: #fff;
+        font-weight: 200;
+        font-size: 3.4rem;
+        letter-spacing: 0;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+}
+
 .blog-content {
-    margin-right: 350px;
+    margin-right: 360px;
 }
 
 .blog-sidebar {
     width: 300px;
-    padding: 50px 60px 50px 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -171,12 +203,11 @@ h4 a, h5 a, h6 a {
 
 @include breakpoint(1100px) {
     .page-wrapper { padding: 30px 40px; }
-    .blog-sidebar { padding: 30px 30px 30px 0; }
-    .blog-content { margin-right: 330px; }
+    .blog-content { margin-right: 340px; }
 }
 
 @include breakpoint(1000px) {
-    .blog-content { margin-right: 280px; }
+    .blog-content { margin-right: 290px; }
     .blog-sidebar { width: 250px; }
 }
 
@@ -186,7 +217,6 @@ h4 a, h5 a, h6 a {
     .blog-sidebar {
         width: 100%;
         position: static;
-        padding: 15px 0;
     }
 }
 
@@ -331,6 +361,13 @@ h4 a, h5 a, h6 a {
 
 // SINGLE
 
+.post-template {
+    .post {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+
 .post-content {
     margin-bottom: 3.2em;
 }
@@ -384,10 +421,34 @@ h4 a, h5 a, h6 a {
 }
 
 .author {
+    position: relative;
     margin: 1.6em 0;
     padding: 30px;
     border: $lightgrey 2px dashed;
     background: lighten($lightgrey, 5%);
+
+    .author-img {
+        border: #fff 5px solid;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+}
+
+.author-meta {
+    margin-left: 120px;
+
+    p {
+        margin: 1rem 0 0 0;
+        font-size: 1.4rem;
+    }
+}
+
+@include breakpoint(550px) {
+    .author { padding: 20px; text-align: center; }
+    .author .author-img { position: static; }
+    .author-meta { margin-left: 0; }
+    .author-meta p { font-size: 1.3rem; }
 }
 
 .comments {
