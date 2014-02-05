@@ -85,7 +85,7 @@ h1 {
     letter-spacing: -2px;
     text-indent: -3px;
     @include breakpoint(500px) {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 }
 
@@ -98,7 +98,7 @@ h2 {
     padding-top: 0;
     border: none;
     @include breakpoint(500px) {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -260,17 +260,59 @@ h4 a, h5 a, h6 a {
 
 .post {
     margin-bottom: 40px;
-    border-bottom: #eee 1px dashed;
+    border-bottom: darken($lightgrey, 5%) 1px dashed;
 
     @include breakpoint(500px) {
         margin-bottom: 25px;
     }
 }
 
+.post-title {
+    margin:0;
+}
+
+.post-title a {
+    text-decoration: none;
+}
+
+.post-excerpt p {
+    margin: 3.2rem 0;
+    @include breakpoint(500px) { margin: 2rem 0; }
+}
+
+.post-meta {
+    margin: 5px 0;
+    font-size: 1.4rem;
+    color: #9EABB3;
+
+    .author-img {
+        width: 24px;
+        height: 24px;
+        float: left;
+        margin-right: 9px;
+        @include breakpoint(500px) {display: none;}
+    }
+
+}
+
+.author-img {
+    border-radius: 100%;
+}
+
+.post-meta a {
+    color: #9EABB3;
+    text-decoration: none;
+}
+
+.post-meta a:hover {
+    text-decoration: underline;
+}
+
 .more-links {
-    margin: 1.6em 0;
+    margin: 2em 0;
 
     @include breakpoint(500px) {
+        margin: 1.6em 0;
         .right { display: none; }
     }
 }
@@ -288,36 +330,6 @@ h4 a, h5 a, h6 a {
 }
 
 // SINGLE
-
-.post-title {
-    margin:0;
-}
-
-.post-title a {
-    text-decoration: none;
-}
-
-.post-excerpt p {
-    margin: 1.6rem 0 0 0;
-}
-
-.post-meta {
-    display: inline-block;
-    margin: 0 0 5px 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
-    color: #9EABB3;
-    text-transform: uppercase;
-}
-
-.post-meta a {
-    color: #9EABB3;
-    text-decoration: none;
-}
-
-.post-meta a:hover {
-    text-decoration: underline;
-}
 
 .post-content {
     margin-bottom: 3.2em;
@@ -389,10 +401,7 @@ h4 a, h5 a, h6 a {
 /* The main wrapper for our pagination links */
 .pagination {
     position: relative;
-    width: 80%;
-    max-width: 700px;
-    margin: 4rem auto;
-    font-family: 'Open Sans', sans-serif;
+    margin: 40px auto;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -400,6 +409,10 @@ h4 a, h5 a, h6 a {
 
 .pagination a {
     color: #9EABB3;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 /* Push the previous/next links out to the left/right */
@@ -407,11 +420,16 @@ h4 a, h5 a, h6 a {
 .newer-posts {
     position: absolute;
     display: inline-block;
-    padding: 0 15px;
+    padding: 5px 15px;
     border: #EBF2F6 2px solid;
     text-decoration: none;
     border-radius: 30px;
     transition: border ease 0.3s;
+
+    @include breakpoint(500px) {
+        position: static;
+        margin: 10px 0;
+    }
 }
 
 .older-posts {
@@ -420,7 +438,9 @@ h4 a, h5 a, h6 a {
 
 .page-number {
     display: inline-block;
-    padding: 2px 0;
+    padding: 5px 0;
+
+    @include breakpoint(500px) { display: block; }
 }
 
 .newer-posts {
