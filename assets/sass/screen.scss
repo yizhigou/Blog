@@ -84,6 +84,9 @@ h1 {
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
+    @include breakpoint(500px) {
+        font-size: 3rem;
+    }
 }
 
 h2 {
@@ -94,14 +97,23 @@ h2 {
     font-weight: bold;
     padding-top: 0;
     border: none;
+    @include breakpoint(500px) {
+        font-size: 2.8rem;
+    }
 }
 
 h3 {
     font-size: 2.5rem;
+    @include breakpoint(500px) {
+        font-size: 2rem;
+    }
 }
 
 h4 {
     font-size: 2.2rem;
+    @include breakpoint(500px) {
+        font-size: 2rem;
+    }
 }
 
 h5 {
@@ -246,6 +258,35 @@ h4 a, h5 a, h6 a {
     }
 }
 
+.post {
+    margin-bottom: 40px;
+    border-bottom: #eee 1px dashed;
+
+    @include breakpoint(500px) {
+        margin-bottom: 25px;
+    }
+}
+
+.more-links {
+    margin: 1.6em 0;
+
+    @include breakpoint(500px) {
+        .right { display: none; }
+    }
+}
+
+.read-more {
+    min-height: 0;
+    padding: 0.4em 0.7em;
+    font-size: 10px;
+    line-height: 12px;
+    vertical-align: top;
+
+    @include breakpoint(500px) {
+        padding: 0.6em 1em;
+    }
+}
+
 // SINGLE
 
 .post-title {
@@ -321,7 +362,7 @@ h4 a, h5 a, h6 a {
     margin: 1.6em 0;
 }
 
-.fb-like {
+.single-template .fb-like {
     margin-right: 30px;
 }
 
