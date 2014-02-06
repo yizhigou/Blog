@@ -454,6 +454,8 @@ h4 a, h5 a, h6 a {
     background: lighten($lightgrey, 5%);
 
     .author-img {
+        width: 80px;
+        height: 80px;
         border: #fff 5px solid;
         position: absolute;
         top: 30px;
