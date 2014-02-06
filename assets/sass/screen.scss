@@ -98,7 +98,7 @@ h2 {
     padding-top: 0;
     border: none;
     @include breakpoint(500px) {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -158,9 +158,9 @@ h4 a, h5 a, h6 a {
 .blog-header {
     position: relative;
     display: table;
-    height: 200px;
+    height: 300px;
     width: 100%;
-    padding: 50px 60px;
+    padding: 0 60px;
     margin: -50px -60px 50px;
     text-align: center;
     color: #fff;
@@ -168,16 +168,24 @@ h4 a, h5 a, h6 a {
     background-size: cover;
 
     @include breakpoint(1100px) {
-        padding: 30px 40px;
+        padding: 0 40px;
         margin: -30px -40px 30px;
     }
     @include breakpoint(850px) {
-        padding: 8% 11%;
-        margin: -11% -15% 11% -15%;
+        width: 114%;
+        padding: 0 11%;
+        margin: -11% 0 11% -18%;
     }
-    @include breakpoint(500px) {
-        height: 150px;
-        padding: 15px;
+    @include breakpoint(650px) {
+        height: 250px;
+        width: 114%;
+        padding: 0 11%;
+        margin: -11% 0 11% -18%;
+    }
+    @include breakpoint(400px) {
+        width: 100%;
+        height: 200px;
+        padding: 0 15px;
         margin: -15px -15px 15px;
     }
 
@@ -189,9 +197,9 @@ h4 a, h5 a, h6 a {
         max-width: 640px;
         margin: 0 auto;
 
-        @include breakpoint(850px) { font-size: 2.2rem; }
-        @include breakpoint(650px) { font-size: 2rem; }
-        @include breakpoint(650px) { font-size: 1.8rem; }
+        @include breakpoint(850px) { font-size: 2.6rem; }
+        @include breakpoint(650px) { font-size: 2.2rem; }
+        @include breakpoint(500px) { font-size: 1.8rem; }
     }
 }
 
@@ -425,7 +433,11 @@ h4 a, h5 a, h6 a {
     margin: 1.6em 0;
 }
 
-.single-template .fb-like {
+.fb-like {
+    line-height: 1.2rem;
+}
+
+.post-template .fb-like {
     margin-right: 30px;
 }
 
