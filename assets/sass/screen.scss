@@ -245,6 +245,7 @@ h4 a, h5 a, h6 a {
     .blog-sidebar {
         width: 100%;
         position: static;
+        margin-top: 30px;
     }
 }
 @include breakpoint(650px) {
@@ -288,6 +289,8 @@ h4 a, h5 a, h6 a {
     color: #7E878B;
     background: $lightgrey;
 
+    @include breakpoint(850px) { display: none; }
+
     ul {
         padding: 0;
         margin: 0;
@@ -307,6 +310,8 @@ h4 a, h5 a, h6 a {
         background-size: 115px 115px;
         content: "retina";
     }
+
+    @include breakpoint(850px) { display: none; }
 
     &:hover {
         text-decoration: none;
