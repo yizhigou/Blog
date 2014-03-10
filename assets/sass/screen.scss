@@ -22,7 +22,7 @@
  // sass --watch assets/sass/screen.scss:assets/css/screen.css --style compressed
 
 /* ==========================================================================
-   0. Imports & Vars
+   Imports & Vars
    ========================================================================== */
 
  // Bourbon - http://bourbon.io/
@@ -69,13 +69,13 @@ $green: #9FBB58;
 
 
 /* ==========================================================================
-   1. Icons - Sets up the icon font and respective classes
+   Global Content
    ========================================================================== */
 
 .blog-content {
     font-size: 1.6rem;
     @include breakpoint(500px) {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -147,7 +147,7 @@ h4 a, h5 a, h6 a {
 }
 
 /* ==========================================================================
-   1. Icons - Sets up the icon font and respective classes
+   Global Layout
    ========================================================================== */
 
 .page-wrapper {
@@ -392,7 +392,9 @@ h4 a, h5 a, h6 a {
     }
 }
 
-// SINGLE
+/* ==========================================================================
+   Single Post
+   ========================================================================== */
 
 .post-template {
     .post {
@@ -496,7 +498,7 @@ h4 a, h5 a, h6 a {
 }
 
 /* ==========================================================================
-   7. Pagination - Tools to let you flick between pages
+   Pagination - Tools to let you flick between pages
    ========================================================================== */
 
 /* The main wrapper for our pagination links */
