@@ -202,6 +202,10 @@ h4 a, h5 a, h6 a {
         @include breakpoint(500px) { font-size: 1.8rem; }
     }
 }
+// Hide header on paginated pages
+.archive-template .blog-header {
+    display: none;
+}
 
 .blog-content {
     margin-right: 360px;
