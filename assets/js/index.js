@@ -3,8 +3,11 @@
     "use strict";
 
     $(document).ready(function(){
-
         $(".post-content").fitVids();
+    });
+
+    // When all content is loaded, resize dem images
+    $(window).load(function() {
 
         function casperFullImg() {
             $("img").each( function() {
@@ -18,11 +21,11 @@
                 }
             });
         };
-
+        
         casperFullImg();
         $(window).smartresize(casperFullImg);
-
     });
+
 
 }(jQuery));
 
