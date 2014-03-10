@@ -442,6 +442,7 @@ h4 a, h5 a, h6 a {
 
 .share {
     margin: 1.6em 0;
+    @include breakpoint(750px) { display: none; }
 }
 
 .fb-like {
