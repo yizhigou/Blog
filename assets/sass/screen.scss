@@ -208,15 +208,13 @@ h4 a, h5 a, h6 a {
 }
 
 .blog-content {
-    margin-right: 360px;
+    width: 63.26531%;
+    float: left;
 }
 
 .blog-sidebar {
-    width: 300px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    width: 30.61224%;
+    float: right;
 
     p {
         font-size: 17px;
@@ -233,11 +231,12 @@ h4 a, h5 a, h6 a {
 
 @include breakpoint(1100px) {
     .page-wrapper { padding: 30px 40px; }
-    .blog-content { margin-right: 340px; }
 }
 @include breakpoint(1000px) {
-    .blog-content { margin-right: 290px; }
-    .blog-sidebar { width: 250px; }
+    .blog-content, .blog-sidebar {
+        width: 100%;
+        float: none;
+    }
 }
 @include breakpoint(850px) {
     .page-wrapper { padding: 8% 11% }
