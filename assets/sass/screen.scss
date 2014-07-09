@@ -326,6 +326,15 @@ h4 a, h5 a, h6 a {
     }
 }
 
+.facebook-box {
+    min-height: 280px;
+    padding: 3px 0 0;
+    border: #eee 1px solid;
+    border-top: $blue 3px solid;
+    text-align: center;
+    @include breakpoint(1000px) { display: none; }
+}
+
 .blog-love {
     display: block;
     text-decoration: none;
