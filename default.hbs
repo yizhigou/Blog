@@ -69,6 +69,25 @@
         </div>
     </main>
 
+    <div class="modal fade" id="blogsubscribe" tabindex="-1" role="dialog" aria-labelledby="Email subscription modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">The latest content, once per week.</h4>
+                    <a class="modal-close" data-dismiss="modal" aria-hidden="true" href="#"><span class="hidden">Close</span></a>
+                </header>
+                <div class="modal-body">
+                    {{! Find/replace "tljkji" with your form code, don't change anything else }}
+                    <form action="http://tryghost.createsend.com/t/t/s/tljkji/" method="post">
+                        <input id="fieldEmail" name="cm-tljkji-tljkji" type="email" placeholder="Your email address" required />
+                        <button class="button-add wide" type="submit">Send me the good stuff</button>
+                        <p><strong>Privacy policy:</strong> No spam. No jibber jabber. Unsubscribe any time.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="partners">
         <h5>Ghost Launch Partners</h5>
         <div class="logos">
