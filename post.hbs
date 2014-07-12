@@ -6,6 +6,22 @@
         <article class="{{post_class}}">
         {{#post}}
 
+            {{#contentFor "meta"}}
+            {{! Twitter Card data }}
+            <meta property="twitter:card" content="summary" />
+            <meta property="twitter:site" content="@TryGhost"> 
+            <meta property="twitter:title" content="{{title}}">
+            <meta property="twitter:description" content="{{excerpt words="40"}}..."> 
+            <meta property="twitter:url" content="{{url absolute="true"}}" />
+
+            {{! Open Graph data }}
+            <meta property="og:title" content="{{title}}" /> 
+            <meta property="og:description" content="{{excerpt words="40"}}..." />
+            <meta property="og:type" content="article" /> 
+            <meta property="og:url" content="{{url absolute="true"}}" />
+            <meta property="og:site_name" content="Ghost" /> 
+            {{/contentFor}}
+
             <a class="post-meta" href="/">&larr; Back to the front page</a>
 
             <h1 class="post-title">{{{title}}}</h1>
