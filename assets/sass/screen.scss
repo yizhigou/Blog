@@ -660,10 +660,10 @@ h4 a, h5 a, h6 a {
 .pocket-btn {
     display: inline-block;
     vertical-align: top;
+    margin-right: -10px;
 }
 
 [class^="PIN_"] {
-    margin-right: 30px;
     @include transition(none);
 }
 
