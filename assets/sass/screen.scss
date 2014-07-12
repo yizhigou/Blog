@@ -613,9 +613,8 @@ h4 a, h5 a, h6 a {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
-    padding: 0.6em 0;
-    @include breakpoint(500px) { padding: 0; }
+    margin: 2.2em auto;
+    @include breakpoint(500px) { margin: 1.6em auto; }
 }
 
 .post-content .full-img {
