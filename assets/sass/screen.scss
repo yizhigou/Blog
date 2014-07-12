@@ -662,7 +662,7 @@ h4 a, h5 a, h6 a {
     vertical-align: top;
 }
 
-.pinterest-pin-button a {
+[class^="PIN_"] {
     margin-right: 30px;
     @include transition(none);
 }
