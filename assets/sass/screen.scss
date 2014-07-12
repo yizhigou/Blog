@@ -662,6 +662,11 @@ h4 a, h5 a, h6 a {
     vertical-align: top;
 }
 
+.pinterest-pin-button a {
+    margin-right: 30px;
+    @include transition(none);
+}
+
 .author {
     position: relative;
     margin: 1.6em 0;
