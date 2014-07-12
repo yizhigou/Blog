@@ -10,7 +10,7 @@
 
             <h1 class="post-title">{{{title}}}</h1>
             <section class="post-meta">
-                <img class="author-img" src="{{author.image}}" alt="Author image" />
+                <img class="author-img" src="{{author.image}}" alt="Author image" nopin="nopin" />
                 <span class="author-name">{{author.name}}</span>
                 on the
                 <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="Do of MMMM YYYY"}}</time>
@@ -45,7 +45,7 @@
                 </section>
 
                 <section class="author">
-                    <img class="author-img" src="{{author.image}}" alt="Author image" />
+                    <img class="author-img" src="{{author.image}}" alt="Author image" nopin="nopin" />
                     <div class="author-meta">
                         <h4>{{author.name}}</h4>
                         <p>{{author.bio}} <a href="{{author.website}}">{{author.website}}</a></p>
