@@ -10,12 +10,12 @@
             {{! Twitter Card data }}
             <meta property="twitter:card" content="summary" />
             <meta property="twitter:title" content="{{title}}">
-            <meta property="twitter:description" content="{{excerpt words="40"}}..."> 
+            <meta property="twitter:description" content="{{excerpt words="40"}}...">
             <meta property="twitter:url" content="{{url absolute="true"}}" />
 
             {{! Open Graph data }}
             <meta property="og:type" content="article" />
-            <meta property="og:title" content="{{title}}" /> 
+            <meta property="og:title" content="{{title}}" />
             <meta property="og:description" content="{{excerpt words="40"}}..." />
             <meta property="og:url" content="{{url absolute="true"}}" />
             <meta property="article:publisher" content="https://facebook.com/ghost" />
@@ -86,6 +86,7 @@
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
                     var disqus_shortname = 'blogdotghost';
+                    var disqus_identifier = 'ghost-{{id}}';
                     (function() {
                         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
