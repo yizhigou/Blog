@@ -792,4 +792,8 @@ h4 a, h5 a, h6 a {
            background: #111;
        }
    }
+
+   @media (max-width: 800px) {
+       display: none;
+   }
 }
