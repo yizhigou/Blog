@@ -222,6 +222,11 @@ h4 a, h5 a, h6 a {
     width: 30.61224%;
     float: right;
 
+    h1,h2,h3,
+    h4,h5,h6 {
+        margin-top: 0;
+    }
+
     p {
         font-size: 17px;
         font-weight: 200;
