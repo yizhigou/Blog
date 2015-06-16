@@ -1,3 +1,8 @@
+
+
+// sass --watch assets/sass/screen.scss:assets/css/screen.css --style compressed
+
+
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
@@ -18,8 +23,6 @@
 
  */
 
-
- // sass --watch assets/sass/screen.scss:assets/css/screen.css --style compressed
 
 /* ==========================================================================
    Imports & Vars
@@ -658,6 +661,10 @@ h4 a, h5 a, h6 a {
 .share {
     margin: 1.6em 0;
     @include breakpoint(750px) { display: none; }
+}
+
+.twitter-share-button {
+    margin-right: 30px;
 }
 
 .fb-like {
