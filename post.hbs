@@ -62,6 +62,17 @@
                     </div>
                 </section>
 
+                <section class="read-next">
+                    {{#next_post}}
+                    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+                        <section class="post">
+                            <h2>{{title}}</h2>
+                            <p>{{excerpt words="19"}}&hellip;</p>
+                        </section>
+                    </a>
+                    {{/next_post}}
+                </section>
+
                 <a class="button-add large wide" data-toggle="modal" data-target="#blogsubscribe">Subscribe to Weekly Posts</a>
 
             </footer>
