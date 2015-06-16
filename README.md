@@ -1,7 +1,17 @@
 # The Ghost Blog
 
-The official Ghost blog
+![image](https://cloud.githubusercontent.com/assets/120485/8188178/20c05762-144c-11e5-9ae2-dee093b617c0.png)
 
-## License
+This is the Ghost company blog theme which runs on <blog.ghost.org> and <dev.ghost.org>. It's not intended for distribution as an easily re-usable theme, but it is provided here as open source for anybody to hack on and work with if they'd like to.
 
-This code is considered closed-source and not for distribution. There is no open source license associated with this project. Copyright &copy; 2014 to the Ghost Foundation. All rights reserved.
+# Development
+
+Compile Sass from the root dir of the theme
+
+```
+sass --watch assets/sass/screen.scss:assets/css/screen.css --style compressed
+```
+
+# Copyright & License
+
+Copyright (c) 2013-2015 Ghost Foundation - Released under the [MIT license](LICENSE).
