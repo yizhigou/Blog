@@ -14,6 +14,7 @@
         <article class="{{post_class}}">
             <header class="post-header">
                 <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                {{#if image}}<img src="{{image}}" alt="Post image" />{{/if}}
                 <section class="post-meta">
                     <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
                     <span class="date">{{date prefix="Desked on: "}}</span>
