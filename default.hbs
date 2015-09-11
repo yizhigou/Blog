@@ -15,14 +15,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://ghost.org/assets/favicon-e13fe17b11ad125601924cfb260f20da.ico">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400,200" />
+    <link rel="stylesheet" type="text/css" href="//fonts.useso.com/css?family=Open+Sans:700,400,200" />
 +   <link rel="stylesheet" type="text/css" href="https://ghost.org/assets/application-53c891abfa2c2305e65de0c84c76e9e1.css" media="all" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
-    <meta property="twitter:site" content="@TryGhost">
-    <meta property="twitter:domain" content="Ghost.org" />
-    <meta property="og:site_name" content="Ghost" />
-    <meta property="fb:admins" content="511697361" />
+    <meta property="twitter:site" content="@yizhigou">
+    <meta property="twitter:domain" content="deskdaily.com" />
+    <meta property="og:site_name" content="DeskDaily" />
 
     {{ghost_head}}
 </head>
@@ -122,17 +121,5 @@
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
-    {{! Twitter buttons }}
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    {{! Facebook buttons }}
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=596756540369391";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    {{! Google+ buttons }}
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </body>
 </html>
